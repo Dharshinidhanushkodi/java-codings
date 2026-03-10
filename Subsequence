@@ -1,0 +1,22 @@
+class Solution {
+    public boolean isSubsequence(String s, String t) {
+        List<Integer> list=new ArrayList<>();
+        char[]sarr=s.toCharArray();
+        char[]tarr=t.toCharArray();
+        int i=0;
+        
+            for(int j=0;j<tarr.length && i<sarr.length;j++)
+            {
+                if(sarr[i]==tarr[j])
+                {
+                    list.add(j);
+                    i++;
+                }
+            }
+            if(list.size()==sarr.length)
+            {
+                return true;
+            }
+            return false;
+    }
+}
