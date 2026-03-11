@@ -1,0 +1,25 @@
+class Solution {
+    public int appendCharacters(String s, String t) {
+        char sarr[]=s.toCharArray();
+        char tarr[]=t.toCharArray();
+        int i=0;
+        int j=0;
+        int count=0;
+            while(j<tarr.length && i< sarr.length)
+            {
+              if(sarr[i]==tarr[j])
+              {
+                j++;
+                i++;
+                count++;
+              }
+              else
+              {
+              i++;
+              }
+            }
+              int res = tarr.length-count; 
+    return res;
+
+    }
+}
