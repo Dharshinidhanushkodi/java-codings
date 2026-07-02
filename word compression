@@ -1,0 +1,29 @@
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		String s=sc.nextLine();
+		char c[]=s.toCharArray();
+		String r="";
+		int i=0;
+		while(i<c.length)
+		{
+		    char h=c[i];
+		    int co=0;
+		    while(i< c.length && h==c[i])
+		    {
+		        i++;
+		        co++;
+		    }
+		    r=r+h;
+		    if(co>1)
+		    {
+		        r=r+co;
+		    }
+		    
+		}
+		System.out.print(r);
+	    
+	}
+}
