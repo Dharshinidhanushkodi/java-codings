@@ -1,0 +1,29 @@
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+	    int n=sc.nextInt();
+	    int s=sc.nextInt();
+	    int c=0;
+	    int carry=0;
+	    while(n!=0 || s!=0)
+	    {
+	        int d=n%10;
+	        int ha=s%10;
+	        int sum=d+ha+carry;
+	        if(sum>9)
+	        {
+	            carry=1;
+	            c++;
+	        }
+	        else
+	        {
+	            carry=0;
+	        }
+	        n=n/10;
+	        s=s/10;
+	    }
+	    System.out.print(c);
+	}
+}
