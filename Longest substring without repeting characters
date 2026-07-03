@@ -1,0 +1,29 @@
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+          Scanner sc=new Scanner(System.in);
+          String s=sc.nextLine();
+          int k=0;
+          int maxlen=0;
+          int maxst=0;
+          int freq[]=new int[126];
+          for(int i=0;i<s.length();i++)
+          {
+              char c=s.charAt(i);
+              freq[c]++;
+              while(freq[c]>1)
+              {
+                  freq[s.charAt(k)]--;
+                  k++;
+              }
+              maxlen=Math.max(maxlen,i-k+1);
+              if(i-k+1>maxlen)
+              {
+                  maxlen=i-k+1;
+                  maxst=k;
+              }
+          }
+          System.out.print(s.substring(maxst,maxst+maxlen));
+	}
+}
